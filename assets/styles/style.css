@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+body {
+
+}
+
+ul, li{
+    list-style: none;
+}
+
+/*トップページ*/
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #fff;
+    /*position: fixed;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    height: 64px;
+}
+.header_left{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.header_sentence{
+    color: lightblue;
+}
+.header_button{
+    background: linear-gradient(-90deg, rgb(111, 211, 245), rgb(28, 110, 191));
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px 50px;
+    box-shadow: 0 5px 10px 0 rgb(111, 211, 245)
+}
+
+main {
+    background-size: cover;
+    background-color: rgb(242, 241, 241);
+}
+.container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.top_main_left {
+    display: grid;
+    gap: 20px;
+}
+.time{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 120px;
+    padding: 0;
+    margin: 0;;
+}
+.time li {
+    background-color: #fff;
+    list-style: none;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+.time li p{
+    text-align: center;
+    line-height: 1.5;
+}
+.time_title{
+    color: blue;
+}
+.time_number{
+    color: black;
+    font-size: 40px;
+}
+.time_unit{
+    color: lightblue;
+}
+.bar_graph {
+    background-color: #fff;
+    height: 400px;
+    border-radius: 20px;
+}
+.top_main_right{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 540px;
+}
+.top_main_right div{
+    background-color: #fff;
+    border-radius: 20px;
+}
+.top_main_bottom{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 500px;
+}
+
+/*モーダル画面*/
+.modal_dialog{
+    margin: 10px 0;
+    top: 50%;
+    left: 50%;
+}
+
+.modal_dialog_button{
+    text-align: right;
+    display: block;
+    margin: 0 10px;
+}
+.modal_dialog_button button{
+    color: gray;
+    background-color: rgb(242, 241, 241);
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+}
+.modal_dialog_container{
+    position: relative;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin: 0 56px;
+}
+.modal_left{
+    display: grid;
+    gap: 20px;
+}
+.modal_study_day input{
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgb(242, 241, 241);
+    border: none;
+    border-radius: 10px;
+}
+.icon_del::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+.modal_study_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.modal_study_content_item{
+    margin: 5px ;
+    background-color: rgb(242, 241, 241);
+    padding: 10px;
+    border-radius: 20px;
+}
+.modal_study_language{
+    display: flex;
+    flex-wrap: wrap;
+}
+.modal_study_language_item{
+    margin: 5px;
+    background-color: rgb(242, 241, 241);
+    padding: 10px;
+    border-radius: 20px;
+}
+.modal_right{
+    display: grid;
+    gap: 20px;
+}
+.modal_study_time input{
+    margin: 5px 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(242, 241, 241);
+    border: none;
+    border-radius: 10px;
+}
+.modal_twitter_comment textarea{
+    margin: 5px 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(242, 241, 241);
+    border: none;
+    border-radius: 10px;
+}
+.modal_twitter_comment input{
+    margin: 5px 0;
+}
+.modal_bottom{
+    text-align: center;
+}
+.modal_bottom_button{
+    margin: 10px;
+    background: linear-gradient(-90deg, rgb(111, 211, 245), rgb(28, 110, 191));
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 10px 0 rgb(111, 211, 245)
+}

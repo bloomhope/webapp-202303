@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- スタイルシート読み込み  -->
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <!-- Google Fonts読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <!-- js読み込み -->
+    <script src="../assets/scripts/top.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header_left">
+            <div class="header_logo">
+                <img src="../assets/img/logo.svg" alt="POSSE">
+            </div>
+            <div class="header_sentence">
+                <P>4th week</P>
+            </div>
+        </div>
+        <button class="header_button" id="open">記録・投稿
+        </button>
+    </header>
+    <main>
+        <section class="container">
+            <div class="top_main_left">
+                <ul class="time">
+                    <li class="time_today">
+                        <p class="time_title">Today</p>
+                        <p class="time_number">3</p>
+                        <p class="time_unit">hour</p>
+                    </li>
+                    <li class="time_month">
+                        <p class="time_title">Month</p>
+                        <p class="time_number">120</p>
+                        <p class="time_unit">hour</p>
+                    </li>
+                    <li class="time_total">
+                        <p class="time_title">Total</p>
+                        <p class="time_number">1348</p>
+                        <p class="time_unit">hour</p>
+                    </li>
+                </ul>
+                <div class="bar_graph">
+                </div>
+            </div>
+            <div class="top_main_right">
+                <div class="doughnut_language"></div>
+                <div class="doughnut_content"></div>
+            </div>
+        </section>
+        <section class="top_main_bottom">
+            <p><<p>
+            <p>2020年10月</p>
+            <p>></p>
+        </section>
+    <!--モーダル画面-->
+        <dialog>
+            <div class="modal_dialog">
+                <div class="modal_dialog_button">
+                    <button id="close">×</button>
+                </div>
+                <div class="modal_dialog_container">
+                    <div class="modal_left">
+                        <div class="modal_study_day">
+                            <p>学習日</p>
+                            <input type="date" class="icon_del">
+                        </div>
+                        <div>
+                            <p>学習コンテンツ（複数選択可）</p>
+                            <div class="modal_study_content">
+                                <div class="modal_study_content_item">
+                                    <input type="checkbox" name="content" id="N">
+                                    <label for="N">N予備校</label>
+                                </div>
+                                <div class="modal_study_content_item">
+                                    <input type="checkbox" name="content" id="dot">
+                                    <label for="dot">ドットインストール</label>
+                                </div>
+                                <div class="modal_study_content_item">
+                                    <input type="checkbox" name="content" id="POSSE">
+                                    <label for="POSSE">POSSE</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>学習言語（複数選択可）</p>
+                            <div class="modal_study_language">
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="html">
+                                    <label for="html">HTML</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="css">
+                                    <label for="css">CSS</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="js">
+                                    <label for="js">JavaScript</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="php">
+                                    <label for="php">PHP</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="laravel">
+                                    <label for="laravel">Laravel</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="sql">
+                                    <label for="sql">SQL</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="shell">
+                                    <label for="shell">SHELL</label>
+                                </div>
+                                <div class="modal_study_language_item">
+                                    <input type="checkbox" name="language" id="others">
+                                    <label for="others">情報システム基礎知識（その他）</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_right">
+                        <div class="modal_study_time">
+                            <p>学習時間</p>
+                            <input type="text">
+                        </div>
+                        <div class="modal_twitter_comment">
+                            <p>Twitter用コメント</p>
+                            <textarea></textarea>
+                            <div class="modal_twitter_share">
+                                <input type="checkbox" id="twitter">
+                                <label for="twitter">Twitterにシェアする</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_bottom">
+                    <button class="modal_bottom_button">記録・投稿</button>
+                </div>
+            </div>
+        </dialog>
+    </main>
+</body>
+</html>
