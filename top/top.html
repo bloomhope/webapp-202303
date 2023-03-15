@@ -14,6 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Rubik:wght@600&display=swap" rel="stylesheet">
     <!-- js読み込み -->
     <script src="../assets/scripts/top.js" defer></script>
+    <script src="../assets/scripts/chart.js" defer></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" defer></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"
+    integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg=="
+    crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@next/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
 </head>
 <body>
     <header>
@@ -49,11 +60,37 @@
                     </li>
                 </ul>
                 <div class="bar_graph">
+                    <div class="bar_graph_content">
+                        <canvas  id="bar_graph"></canvas>
+                    </div>
                 </div>
             </div>
             <div class="top_main_right">
-                <div class="doughnut_language"></div>
-                <div class="doughnut_content"></div>
+                <div class="doughnut_language" id="legend-container">
+                    <p>学習言語</p>
+                    <canvas id="doughnut_language">
+                    </canvas>
+                    <ul>
+                        <li class="doughnut_list1">HTML</li>
+                        <li class="doughnut_list2">CSS</li>
+                        <li class="doughnut_list3">JavaScript</li>
+                        <li class="doughnut_list4">PHP</li>
+                        <li class="doughnut_list5">Laravel</li>
+                        <li class="doughnut_list6">SQL</li>
+                        <li class="doughnut_list7">SHELL</li>
+                        <li class="doughnut_list8">情報システム基礎知識（その他）</li>
+                    </ul>
+                </div>
+                <div class="doughnut_content">
+                    <p>学習コンテンツ</p>
+                    <canvas id="doughnut_content">
+                    </canvas>
+                    <ul>
+                        <li class="doughnut_list1">N予備校</li>
+                        <li class="doughnut_list2">ドットインストール</li>
+                        <li class="doughnut_list3">POSSE</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="top_main_bottom">
@@ -62,7 +99,7 @@
             <p>></p>
         </section>
     <!--モーダル画面-->
-        <dialog>
+        <dialog id="modal1">
             <div class="modal_dialog">
                 <div class="modal_dialog_button">
                     <button id="close">×</button>
@@ -144,8 +181,16 @@
                     </div>
                 </div>
                 <div class="modal_bottom">
-                    <button class="modal_bottom_button">記録・投稿</button>
+                    <button class="modal_bottom_button" data-target="#modal2">記録・投稿</button>
                 </div>
+            </div>
+        </dialog>
+    <!--ローディング画面-->
+        <dialog class="loading" id="modal2">
+            <!--<div class="loading_animation"></div>-->
+            <div class="loading_finish">
+                <p class="loading_finish_english">AWESOME!</p>
+                <p class="loading_finish_sentence">記録・投稿<br>完了しました</p>
             </div>
         </dialog>
     </main>

@@ -11,3 +11,15 @@ btn_close.addEventListener('click', function() {
   // 閉じるボタンをクリックした場合の処理
   dialog.close();
 }, false);
+
+$(function(){
+  /* Modal2へのボタン押下時のイベント */
+  $('#modal2').on('click', function() {
+      changeModal('modal1', 'modal2');
+  });
+  /* モーダルの切り替え */
+  function changeModal(beforeModal, afterModal) {
+      $('#'+beforeModal).modal( 'hide' );
+      $('#'+afterModal).modal('show');
+  }
+});
