@@ -51,13 +51,12 @@ main {
 }
 .container {
     position: relative;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding: 20px 0 50px 0;
 }
 .top_main_left {
     display: grid;
@@ -67,9 +66,9 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    height: 120px;
+    height: 145px;
     padding: 0;
-    margin: 0;;
+    margin: 0;
 }
 .time li {
     background-color: #fff;
@@ -79,7 +78,7 @@ main {
 }
 .time li p{
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 .time_title{
     color: blue;
@@ -93,36 +92,105 @@ main {
 }
 .bar_graph {
     background-color: #fff;
-    height: 400px;
+    height: 420px;
     border-radius: 20px;
+    position: relative;
 }
+
 .top_main_right{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    height: 540px;
+    height: 585px;
 }
 .top_main_right div{
     background-color: #fff;
     border-radius: 20px;
 }
+.top_main_right p{
+    padding: 30px 0px 50px 20px;
+}
+.doughnut_language ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 10px;
+}
+.doughnut_language li::before{
+    position: relative;
+    top: -2px;
+    left: -5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-radius: 100%;
+}
+.doughnut_content ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 10px;
+}
+.doughnut_content li::before{
+    position: relative;
+    top: -2px;
+    left: -5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-radius: 100%;
+}
+.doughnut_list1::before{
+    background: #0000ff;
+}
+.doughnut_list2::before{
+    background: #4682b4;
+}
+.doughnut_list3::before{
+    background: #00ced1;
+}
+.doughnut_list4::before{
+    background: #00bfff;
+}
+.doughnut_list5::before{
+    background: #9370db;
+}
+.doughnut_list6::before{
+    background: #7b68ee;
+}
+.doughnut_list7::before{
+    background: #0000cd;
+}
+.doughnut_list8::before{
+    background: #00008b;
+}
 .top_main_bottom{
     display: flex;
     justify-content: center;
-    padding-bottom: 500px;
+    padding-bottom: 85px;
+}
+#bar_graph{
+    position: absolute;
+    top: 70px;
+    right: 10px;
 }
 
 /*モーダル画面*/
+dialog{
+    border: none;
+    border-radius: 30px;
+    margin: auto;
+    width: 900px;
+}
 .modal_dialog{
-    margin: 10px 0;
-    top: 50%;
-    left: 50%;
 }
 
 .modal_dialog_button{
     text-align: right;
     display: block;
-    margin: 0 10px;
+    margin: 10px;
 }
 .modal_dialog_button button{
     color: gray;
@@ -130,10 +198,12 @@ main {
     border: none;
     border-radius: 100%;
     padding: 10px;
+    width: 40px;
+    height: 40px;
 }
+
 .modal_dialog_container{
     position: relative;
-    max-width: 900px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
@@ -152,27 +222,63 @@ main {
 }
 .icon_del::-webkit-calendar-picker-indicator {
     opacity: 0;
-  }
+}
 .modal_study_content{
     display: flex;
     flex-wrap: wrap;
 }
-.modal_study_content_item{
-    margin: 5px ;
-    background-color: rgb(242, 241, 241);
-    padding: 10px;
+.modal_dialog input[type="checkbox"]{
+    display: none;
+}
+.modal_dialog input[type="checkbox"]+label{
+    border: none;
     border-radius: 20px;
+    background-color: rgb(242, 241, 241);
+    margin: 5px ;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.modal_dialog input[type="checkbox"]+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 3px;
+    top: 50%;
+    border:none;
+    border-radius: 100%;
+    background-color:gray ;
+    margin-left: 10px;
+}
+.modal_dialog input[type="checkbox"]:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: ;
+    top: 35%;
+    left: 14px;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color:#fff; /* チェックの色変更 お好きな色を */
 }
 .modal_study_language{
     display: flex;
     flex-wrap: wrap;
 }
-.modal_study_language_item{
-    margin: 5px;
-    background-color: rgb(242, 241, 241);
-    padding: 10px;
-    border-radius: 20px;
-}
+
 .modal_right{
     display: grid;
     gap: 20px;
@@ -196,15 +302,41 @@ main {
 .modal_twitter_comment input{
     margin: 5px 0;
 }
+.modal_twitter_share input[type="checkbox"]+label::before{
+    background-color: rgb(28, 110, 191);
+}
 .modal_bottom{
     text-align: center;
 }
 .modal_bottom_button{
-    margin: 10px;
+    margin: 20px;
     background: linear-gradient(-90deg, rgb(111, 211, 245), rgb(28, 110, 191));
     border: none;
     border-radius: 30px;
     color: #fff;
-    padding: 20px 100px;
+    size: 20px;
+    padding: 20px 150px;
     box-shadow: 0 5px 10px 0 rgb(111, 211, 245)
+}
+
+.loading{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background:#fff;
+    z-index: 9999;
+}
+.loading_animation{
+
+}
+.loading_finish{
+
+}
+.loading_finish_english::before{
+    
+}
+.loading_finish_english::after{
+    
 }
